@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/digital-project/static/css/main.073c9b0a.css",
+    "main.js": "/digital-project/static/js/main.0822fa14.js",
+    "index.html": "/digital-project/index.html",
+    "main.073c9b0a.css.map": "/digital-project/static/css/main.073c9b0a.css.map",
+    "main.0822fa14.js.map": "/digital-project/static/js/main.0822fa14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.0822fa14.js"
+  ]
+}
