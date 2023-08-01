@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "digital-project",
+  "homepage": "https://vazhavazh.github.io/digital-project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
