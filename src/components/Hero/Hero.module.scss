@@ -1,0 +1,68 @@
+@import "../../index.scss";
+
+.heroWrapper {
+	background-color: yellow;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.interfaceContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.titleWrapper {
+	margin-bottom: 90px;
+}
+
+.mainTitle {
+	color: $titleGray;
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.projectTitle {
+	color: $mainTextColorGrey;
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.btnWrapper {
+	display: flex;
+	gap: 23px;
+}
+
+.btn {
+	width: 53px;
+	height: 53px;
+	padding: 15px 14px 14px;
+	border: 1px solid #f2f2f2;
+	background: #f9f9f9;
+	transition: all $hoverAnimation;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $mainTextColorGrey;
+		border-color: $secondTextColorBlack;
+	}
+
+    & .icon {
+        width: 100%;
+        height: 100%;
+    }
+
+	&:hover .icon {
+		color: $mainBgColorWhite;
+	}
+}
+
+.iconWrapper {
+	display: inline-block; /* This makes the wrapper element wrap around the icon */
+	width: 24px; /* Set the desired width */
+	height: 24px; /* Set the desired height */
+}

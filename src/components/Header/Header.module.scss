@@ -31,7 +31,7 @@
 		position: relative;
 
 		text-decoration: none;
-		color: $mainTextColorGray;
+		color: $mainTextColorGrey;
 		font-size: 12px;
 		line-height: 100%;
 		letter-spacing: calc(2.4px / 12);
@@ -49,7 +49,7 @@
 				width: 100%;
 				left: 0;
 				right: 0;
-				border-top: 1px solid $mainTextColorGray;
+				border-top: 1px solid $mainTextColorGrey;
 			}
 			&::before {
 				top: 0;
