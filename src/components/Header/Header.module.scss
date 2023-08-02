@@ -3,6 +3,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	padding-right: 270px;
@@ -14,24 +15,50 @@
 
 .navWrapper {
 	display: flex;
+}
 
-	li {
-		@include calc(5, 60px);
-		margin-right: 60px;
-	}
-	li:last-child {
+.navItem {
+	@include calc(5, 60px);
+	margin-right: 60px;
+
+	text-align: center;
+
+	&:last-child {
 		margin-right: 0;
 	}
 
-	a {
+	.navLink {
+		position: relative;
+
 		text-decoration: none;
 		color: $mainTextColorGray;
-		color: var(--gray-1, #333);
-
 		font-size: 12px;
-
 		line-height: 100%;
 		letter-spacing: calc(2.4px / 12);
 		text-transform: uppercase;
+
+		
+
+		&[aria-current="page"] {
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+
+				width: 100%;
+				left: 0;
+				right: 0;
+				border-top: 1px solid $mainTextColorGray;
+			}
+			&::before {
+				top: 0;
+				margin-top: -3px;
+			}
+			&::after {
+				bottom: 0;
+				margin-bottom: -3px;
+			}
+		}
 	}
 }

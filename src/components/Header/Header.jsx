@@ -12,20 +12,40 @@ const Header = () => {
 
 			<nav>
 				<ul className={styles.navWrapper}>
-					<li>
-						<NavLink to='/'>Главная</NavLink>
+					<li className={styles.navItem}>
+						<NavLink
+							className={styles.navLink}
+							to='/'>
+							Главная
+						</NavLink>
 					</li>
-					<li>
-						<NavLink to='gallery'>Галерея</NavLink>
+					<li className={styles.navItem}>
+						<NavLink
+							className={styles.navLink}
+							to='gallery'>
+							Галерея
+						</NavLink>
 					</li>
-					<li>
-						<NavLink to=''>Проекты</NavLink>
+					<li className={styles.navItem}>
+						<NavLink
+							className={styles.navLink}
+							to='projects'>
+							Проекты
+						</NavLink>
 					</li>
-					<li>
-						<NavLink to=''>Сертификаты</NavLink>
+					<li className={styles.navItem}>
+						<NavLink
+							className={styles.navLink}
+							to='certificates'>
+							Сертификаты
+						</NavLink>
 					</li>
-					<li>
-						<NavLink to=''>Контакты</NavLink>
+					<li className={styles.navItem}>
+						<NavLink
+							className={styles.navLink}
+							to='contacts'>
+							Контакты
+						</NavLink>
 					</li>
 				</ul>
 			</nav>
