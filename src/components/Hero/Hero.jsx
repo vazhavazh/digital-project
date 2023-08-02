@@ -22,11 +22,23 @@ const Hero = () => {
 						</span>
 					</button>
 				</div>
+				<div className={styles.counter}>
+					<span>01</span>
+					<span>02</span>
+				</div>
 			</div>
-			<img
-				src={heroImage}
-				alt='current project'
-			/>
+			<div className={styles.imageWrapper}>
+				<button className={styles.heroBtn}>
+					Взглянуть
+					<span className={styles.iconWrapper}>
+						<BsArrowRight />
+					</span>
+				</button>
+				<img
+					src={heroImage}
+					alt='current project'
+				/>
+			</div>
 		</div>
 	);
 };

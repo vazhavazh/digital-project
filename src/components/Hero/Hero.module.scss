@@ -1,10 +1,24 @@
 @import "../../index.scss";
 
 .heroWrapper {
-	background-color: yellow;
+	position: relative;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	overflow: hidden;
+	margin-bottom: 120px;
+
+	&::before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		top: 55.9%;
+		left: 10%;
+		min-width: 100%;
+		height: 1px;
+		background-color: $thirdColorWhite;
+	}
 }
 
 .interfaceContainer {
@@ -33,15 +47,19 @@
 }
 
 .btnWrapper {
+	z-index: 10000;
+	position: relative;
 	display: flex;
 	gap: 23px;
+
+	margin-bottom: 90px;
 }
 
 .btn {
 	width: 53px;
 	height: 53px;
 	padding: 15px 14px 14px;
-	border: 1px solid #f2f2f2;
+	border: 1px solid $thirdColorWhite;
 	background: #f9f9f9;
 	transition: all $hoverAnimation;
 
@@ -51,10 +69,10 @@
 		border-color: $secondTextColorBlack;
 	}
 
-    & .icon {
-        width: 100%;
-        height: 100%;
-    }
+	& .icon {
+		width: 100%;
+		height: 100%;
+	}
 
 	&:hover .icon {
 		color: $mainBgColorWhite;
@@ -62,7 +80,75 @@
 }
 
 .iconWrapper {
-	display: inline-block; /* This makes the wrapper element wrap around the icon */
-	width: 24px; /* Set the desired width */
-	height: 24px; /* Set the desired height */
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+.counter {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	padding-top: 4px;
+	padding-bottom: 3px;
+	max-width: 142px;
+	&::before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		top: 100%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+		width: 1px;
+		height: 140%;
+		background-color: #e0e0e0;
+		transform: rotate(225deg);
+		transform-origin: 0 0;
+	}
+	span {
+		color: #bdbdbd;
+		font-size: 24px;
+		line-height: 100%;
+	}
+}
+
+.imageWrapper {
+	position: relative;
+	img {
+		position: relative;
+		z-index: 10;
+	}
+}
+
+.heroBtn {
+	z-index: 11;
+	position: absolute;
+	bottom: 0;
+
+	display: flex;
+	max-width: 222px;
+	max-height: 71px;
+	padding: 30px 50px;
+	border: none;
+	background: $mainBgColorWhite;
+	transition: all $hoverAnimation;
+	gap: 12px;
+	color: $mainTextColorGrey;
+
+	font-size: 12px;
+
+	line-height: 100%;
+	letter-spacing: 2.4px;
+	text-transform: uppercase;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $mainTextColorGrey;
+		color: $mainBgColorWhite;
+	}
+
+	& .icon {
+		width: 100%;
+		height: 100%;
+	}
 }

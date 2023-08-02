@@ -10,7 +10,7 @@
 	padding-left: 136px;
 	width: 100%;
 
-	background-color: orange;
+	background-color: #fff;
 }
 
 .navWrapper {
@@ -34,10 +34,8 @@
 		color: $mainTextColorGrey;
 		font-size: 12px;
 		line-height: 100%;
-		letter-spacing: calc(2.4px / 12);
+		letter-spacing: 2.4px;
 		text-transform: uppercase;
-
-		
 
 		&[aria-current="page"] {
 			&::before,
