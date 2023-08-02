@@ -1,0 +1,37 @@
+@import "../../index.scss";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 270px;
+	padding-left: 136px;
+	width: 100%;
+
+	background-color: orange;
+}
+
+.navWrapper {
+	display: flex;
+
+	li {
+		@include calc(5, 60px);
+		margin-right: 60px;
+	}
+	li:last-child {
+		margin-right: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: $mainTextColorGray;
+		color: var(--gray-1, #333);
+
+		font-size: 12px;
+
+		line-height: 100%;
+		letter-spacing: calc(2.4px / 12);
+		text-transform: uppercase;
+	}
+}

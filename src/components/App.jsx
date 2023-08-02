@@ -1,15 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
+import Home from "../pages/Home";
+import Gallery from "../pages/Gallery";
 
 function App() {
 	return (
-		<>
-			<Routes>
+		<Routes>
+			<Route
+				path='/'
+				element={<Layout />}>
 				<Route
-					path='/'
-					element={<Layout />}></Route>
-			</Routes>
-		</>
+					index
+					element={<Home />}
+				/>
+				<Route
+					path='gallery'
+					element={<Gallery />}
+				/>
+			</Route>
+		</Routes>
 	);
 }
 
