@@ -40,7 +40,7 @@ const About = () => {
 				<button className={styles.aboutBtn}>
 					Читать
 					<span className={styles.iconWrapper}>
-						<BsArrowRight />
+						<BsArrowRight className={styles.icon} />
 					</span>
 				</button>
 			</div>

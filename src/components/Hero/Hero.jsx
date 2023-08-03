@@ -31,7 +31,7 @@ const Hero = () => {
 				<button className={styles.heroBtn}>
 					Взглянуть
 					<span className={styles.iconWrapper}>
-						<BsArrowRight />
+						<BsArrowRight className={styles.icon} />
 					</span>
 				</button>
 				<img

@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .container {
-	border: 1px solid red;
+	margin-bottom: 120px;
 }
 .title {
 	display: inline-block;
@@ -16,29 +16,40 @@
 .tasksWrapper {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
 }
 
 .taskItem {
 	display: flex;
+
 	gap: 30px;
 }
 
+.descrWrapper {
+	max-width: 420px;
+}
+
+.indexWrapper {
+	position: relative;
+	min-height: 140px;
+	max-height: 140px;
+	max-width: 120px;
+	min-width: 120px;
+}
+
 .taskIndex {
+	position: absolute;
+	display: inline-block;
+	top: -35%;
 	font-family: "SFProDisplay-Black";
-	font-weight: 900;
-    display: block;
-
-	color: $thirdColorWhite;
-
 	font-size: 200px;
-	font-style: normal;
-
-	line-height: normal;
+	font-weight: 900;
+	color: $thirdColorWhite;
 }
 
 .taskDescription {
 	color: $mainTextColorGrey;
-
+	display: inline-block;
 	font-size: 22px;
 	font-style: normal;
 	font-weight: 400;

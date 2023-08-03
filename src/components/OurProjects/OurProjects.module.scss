@@ -1,0 +1,73 @@
+@import "../../index.scss";
+
+.container {
+	border: 1px solid orange;
+    margin-bottom: 120px;
+}
+
+.title {
+	display: inline-block;
+	color: $titleGray;
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 100%;
+	margin-bottom: 60px;
+}
+
+.photoGrid {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+    margin-bottom: 30px;
+}
+
+.row {
+	display: flex;
+	gap: 30px;
+}
+
+.photo {
+	flex: 1;
+	max-width: calc(50% - 30px);
+	max-height: 255px;
+}
+
+.row:first-child {
+	justify-content: space-between;
+}
+
+.iconWrapper {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+.ourProjectBtn {
+   
+	display: flex;
+	max-width: 222px;
+	max-height: 71px;
+	padding: 24px 36px;
+	border: none;
+	background: $mainTextColorGrey;
+	transition: all $hoverAnimation;
+	gap: 12px;
+	color: $mainBgColorWhite;
+	align-items: center;
+	font-size: 12px;
+
+	line-height: 100%;
+	letter-spacing: 2.4px;
+	text-transform: uppercase;
+     margin-left: auto;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $mainBgColorWhite;
+		color: $mainTextColorGrey;
+	}
+
+	& .icon {
+		width: 100%;
+		height: 100%;
+	}
+}

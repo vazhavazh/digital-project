@@ -1,0 +1,39 @@
+@import "../../index.scss";
+
+.container {
+	border: 1px solid red;
+}
+
+.title {
+	display: inline-block;
+	color: $titleGray;
+	font-size: 64px;
+	font-weight: 300;
+	line-height: 100%;
+	margin-bottom: 22px;
+}
+
+.placeinput {
+	position: relative;
+	overflow: hidden;
+}
+
+.place_holder {
+	z-index: 100;
+	cursor: text;
+	position: absolute;
+	top: 1px;
+	left: 5px;
+	width: 100%;
+	display: none;
+	color: lightgrey;
+
+	span {
+		color: red;
+	}
+}
+
+.placeinput input:invalid + .place_holder,
+.placeinput textarea:invalid + .place_holder {
+	display: inline;
+}

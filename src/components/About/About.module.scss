@@ -69,13 +69,13 @@
 	display: flex;
 	max-width: 222px;
 	max-height: 71px;
-	padding: 30px 50px;
+	padding: 24px 50px;
 	border: none;
 	background: $mainBgColorWhite;
 	transition: all $hoverAnimation;
 	gap: 12px;
 	color: $mainTextColorGrey;
-
+	align-items: center;
 	font-size: 12px;
 
 	line-height: 100%;
