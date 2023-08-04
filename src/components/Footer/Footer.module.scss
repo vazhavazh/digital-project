@@ -1,0 +1,91 @@
+@import "../../index.scss";
+
+.container {
+	width: 100%;
+	margin-bottom: auto;
+	background-color: $footerColorBlack;
+
+	padding: 58px 116px 24px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	color: #fff;
+
+	font-size: 14px;
+
+	font-weight: 500;
+	line-height: 171.429%;
+	letter-spacing: 0.03rem;
+}
+
+.navLink {
+	color: $mainBgColorWhite;
+
+	font-size: 14px;
+
+	font-weight: 500;
+	line-height: 171.429%;
+	letter-spacing: 0.03rem;
+	text-decoration: none;
+	transform: text-decoration $hoverAnimation;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.title {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+.navList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.contactList {
+	display: flex;
+	flex-direction: column;
+	gap: 31px;
+	flex-wrap: wrap;
+
+	a {
+		display: flex;
+		flex-direction: row;
+		gap: 14px;
+		align-items: center;
+		text-decoration: none;
+		color: $mainBgColorWhite;
+		&:hover {
+			text-decoration: underline;
+		}
+
+		span {
+			overflow-wrap: break-word;
+			max-width: 235px;
+		}
+	}
+}
+
+.socialIconsList {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+
+	a {
+		cursor: pointer;
+		text-decoration: none;
+		svg {
+			transition: transform $hoverAnimation;
+		}
+		&:hover {
+			svg {
+				transform: scale(1.4);
+			}
+		}
+	}
+}

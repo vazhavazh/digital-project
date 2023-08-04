@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import logo from "../../assets/img/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import SmallLogo from "../../assets/icons/header/smallLogo";
 const Header = () => {
 	return (
 		<header className={styles.header}>
-			<img
-				src={logo}
-				alt='logo'
-			/>
+			<Link to={"/"}>
+				<SmallLogo />
+			</Link>
 
 			<nav>
 				<ul className={styles.navWrapper}>
