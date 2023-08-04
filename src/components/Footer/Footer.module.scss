@@ -1,11 +1,14 @@
 @import "../../index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .container {
+	border-bottom: 1px solid rgba(200, 200, 200, 0.50);
 	width: 100%;
-	margin-bottom: auto;
+	margin-bottom: 24px;
+
 	background-color: $footerColorBlack;
 
-	padding: 58px 116px 24px;
+	padding: 60px 116px;
 
 	display: flex;
 	flex-direction: row;
@@ -18,6 +21,8 @@
 	font-weight: 500;
 	line-height: 171.429%;
 	letter-spacing: 0.03rem;
+
+	
 }
 
 .navLink {
@@ -88,4 +93,20 @@
 			}
 		}
 	}
+}
+
+.flexCont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.allRights {
+	margin-bottom: 24px;
+	color: rgba(200, 200, 200, 0.5);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 183.333%;
 }
