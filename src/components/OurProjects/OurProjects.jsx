@@ -36,7 +36,7 @@ const OurProjects = () => {
 								<Link
 									className={styles.aboutLink}
 									to={"projects"}>
-									ПОДРОБНЕЕ
+									<span>ПОДРОБНЕЕ</span>
 									<span className={styles.iconWrapper}>
 										<BsArrowRight className={styles.icon} />
 									</span>

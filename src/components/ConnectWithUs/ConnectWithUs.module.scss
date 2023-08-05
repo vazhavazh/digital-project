@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .container {
-	border: 1px solid red;
+	
 	text-align: center;
 	@include tablet {
 		text-align: justify;

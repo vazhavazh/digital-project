@@ -1,9 +1,9 @@
 @import "../../index.scss";
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+
 .container {
 	display: flex;
 	flex-direction: column;
-	border: 1px solid red;
+	
 	margin-bottom: 24px;
 	@include tablet {
 		margin-bottom: 60px;
@@ -75,11 +75,22 @@
 }
 
 .photoFrame {
+	text-align: center;
+	@include tablet {
+		text-align: inherit;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	@include desktop {
+		padding-right: 78px;
+		padding-left: 78px;
+	}
 	position: absolute;
 	display: flex;
+	gap: 14px;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	// align-items: center;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -92,6 +103,7 @@
 	font-family: "Gothic A1", sans-serif;
 	text-decoration: none;
 
+	font-weight: 300;
 	border: none;
 	background-color: transparent;
 	transition: all $hoverAnimation;
@@ -127,11 +139,15 @@
 
 .photoTitle {
 	color: $mainBgColorWhite;
-
-	font-size: 64px;
-
+	font-size: 24px;
 	font-weight: 700;
 	line-height: 1;
+	@include tablet {
+		font-size: 48px;
+	}
+	@include desktopBig {
+		font-size: 64px;
+	}
 }
 
 .iconWrapper {
