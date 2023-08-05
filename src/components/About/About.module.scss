@@ -1,18 +1,29 @@
 @import "../../index.scss";
 
 .container {
+	border: 1px solid red;
 	display: flex;
 	flex-direction: row;
-	gap: 30px;
+	justify-content: center;
 	background-color: $secondaryBgColorWhite;
-	padding: 30px 70px 0px 100px;
-	margin-bottom: 120px;
+	margin-bottom: 24px;
+	@include tablet {
+		gap: 30px;
+		margin-bottom: 60px;
+	}
+	@include desktop {
+		padding: 30px 70px 0px 100px;
+		margin-bottom: 120px;
+	}
 }
 
 .previewWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+	display: none;
+	@include desktop {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 
 .preview1 {
@@ -31,8 +42,15 @@
 	align-items: center;
 }
 .preview3 {
-	width: 270px;
-	height: calc(270px / 0.78);
+	display: none;
+	width: 100%;
+	height: 100%;
+	@include tablet {
+		display: block;
+	}
+	@include desktop {
+		height: calc(270px / 0.78);
+	}
 }
 
 .textWrapper {
@@ -43,21 +61,29 @@
 
 .aboutTitle {
 	color: $titleGray;
-
-	font-size: 64px;
+font-size: 44px;
+align-self: center;
+	
 
 	font-weight: 300;
 	line-height: 1;
+	@include tablet {
+		font-size: 64px;
+		align-self: auto;
+	}
 }
 
 .aboutDescription {
 	display: inline-block;
 
-	max-width: 400px;
 	color: $secondTextColorBlack;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 156.25%;
+
+	@include desktop {
+		max-width: 400px;
+	}
 }
 
 .iconWrapper {
@@ -67,8 +93,7 @@
 }
 .aboutBtn {
 	display: flex;
-	max-width: 222px;
-	max-height: 71px;
+
 	padding: 24px 50px;
 	border: none;
 	background: $mainBgColorWhite;
@@ -81,6 +106,15 @@
 	line-height: 100%;
 	letter-spacing: 2.4px;
 	text-transform: uppercase;
+
+	@include tabletLess {
+		justify-content: center;
+	}
+
+	@include desktop {
+		max-width: 222px;
+		max-height: 71px;
+	}
 
 	&:hover {
 		cursor: pointer;

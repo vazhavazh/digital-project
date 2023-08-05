@@ -23,21 +23,23 @@ const Hero = () => {
 							<h1 className={styles.mainTitle}>Project</h1>
 							<h2 className={styles.projectTitle}>Home</h2>
 						</div>
-						<div className={styles.btnWrapper}>
-							<button className={styles.btn}>
-								<span className={styles.iconWrapper}>
-									<BsArrowLeft className={styles.icon} />
-								</span>
-							</button>
-							<button className={styles.btn}>
-								<span className={styles.iconWrapper}>
-									<BsArrowRight className={styles.icon} />
-								</span>
-							</button>
-						</div>
-						<div className={styles.counter}>
-							<span>01</span>
-							<span>02</span>
+						<div className={styles.flexWrapper}>
+							<div className={styles.btnWrapper}>
+								<button className={styles.btn}>
+									<span className={styles.iconWrapper}>
+										<BsArrowLeft className={styles.icon} />
+									</span>
+								</button>
+								<button className={styles.btn}>
+									<span className={styles.iconWrapper}>
+										<BsArrowRight className={styles.icon} />
+									</span>
+								</button>
+							</div>
+							<div className={styles.counter}>
+								<span>01</span>
+								<span>02</span>
+							</div>
 						</div>
 					</div>
 					<div className={styles.imageWrapper}>

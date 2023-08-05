@@ -1,53 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import SmallLogo from "../../assets/icons/header/smallLogo";
+import { GiHamburgerMenu } from "react-icons/gi";
+import MyModal from "../UI/Modal/MyModal";
+import Navigation from "../Navigation/Navigation";
 const Header = () => {
+	const [modal, setModal] = useState(false);
+	const closeModal = () => {
+		setModal(false);
+	};
 	return (
 		<header className={styles.header}>
-			<Link to={"/"}>
+			<Link
+				to={"/"}
+				className={styles.logo}>
 				<SmallLogo />
 			</Link>
-
-			<nav>
-				<ul className={styles.navWrapper}>
-					<li className={styles.navItem}>
-						<NavLink
-							className={styles.navLink}
-							to='/'>
-							Главная
-						</NavLink>
-					</li>
-					<li className={styles.navItem}>
-						<NavLink
-							className={styles.navLink}
-							to='gallery'>
-							Галерея
-						</NavLink>
-					</li>
-					<li className={styles.navItem}>
-						<NavLink
-							className={styles.navLink}
-							to='projects'>
-							Проекты
-						</NavLink>
-					</li>
-					<li className={styles.navItem}>
-						<NavLink
-							className={styles.navLink}
-							to='certificates'>
-							Сертификаты
-						</NavLink>
-					</li>
-					<li className={styles.navItem}>
-						<NavLink
-							className={styles.navLink}
-							to='contacts'>
-							Контакты
-						</NavLink>
-					</li>
-				</ul>
-			</nav>
+			<button
+				className={styles.burgerButton}
+				onClick={() => setModal(true)}>
+				<GiHamburgerMenu />
+			</button>
+			<MyModal
+				visible={modal}
+				setVisible={setModal}>
+				<Navigation closeModal={closeModal} />
+			</MyModal>
+			<ul className={styles.navWrapper}>
+				<li className={styles.navItem}>
+					<NavLink
+						className={styles.navLink}
+						to='/'>
+						Главная
+					</NavLink>
+				</li>
+				<li className={styles.navItem}>
+					<NavLink
+						className={styles.navLink}
+						to='gallery'>
+						Галерея
+					</NavLink>
+				</li>
+				<li className={styles.navItem}>
+					<NavLink
+						className={styles.navLink}
+						to='projects'>
+						Проекты
+					</NavLink>
+				</li>
+				<li className={styles.navItem}>
+					<NavLink
+						className={styles.navLink}
+						to='certificates'>
+						Сертификаты
+					</NavLink>
+				</li>
+				<li className={styles.navItem}>
+					<NavLink
+						className={styles.navLink}
+						to='contacts'>
+						Контакты
+					</NavLink>
+				</li>
+			</ul>
 		</header>
 	);
 };

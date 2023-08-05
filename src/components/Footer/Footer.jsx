@@ -13,16 +13,16 @@ import { ReactComponent as Twitter } from "../../assets/icons/footer/socialMedia
 import bigLogo from "../../assets/img/footer/bigLogo.png";
 const Footer = () => {
 	return (
-<div className={styles.flexCont}>
+		<div className={styles.flexCont}>
 			<div className={styles.container}>
-				<Link to='/'>
+				<Link to='/'className={styles.logoLink}>
 					<img
 						src={bigLogo}
 						alt='logo'
 					/>
 				</Link>
-	
-				<div>
+
+				<div className={styles.navContainer}>
 					<h4 className={styles.title}>Информация</h4>
 					<ul className={styles.navList}>
 						<li>
@@ -73,7 +73,8 @@ const Footer = () => {
 								rel='noopener noreferrer nofollow'>
 								<Icon3 />
 								<span>
-									100000, Республика Казахстан, г. Караганда, ул. Телевизионная 10
+									100000, Республика Казахстан, г. Караганда, ул. Телевизионная
+									10
 								</span>
 							</Link>
 						</li>
@@ -121,12 +122,11 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-				
 			</div>
 			<span className={styles.allRights}>
-					© 2019 Digital Project. Все права защищены.
-				</span>
-</div>
+				© 2019 Digital Project. Все права защищены.
+			</span>
+		</div>
 	);
 };
 

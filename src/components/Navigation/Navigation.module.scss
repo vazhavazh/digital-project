@@ -1,59 +1,22 @@
 @import "../../index.scss";
 
-.header {
+.navWrapper {
 	display: flex;
-
-	padding: 16px 16px;
-
-	justify-content: space-between;
-	align-items: flex-start;
-
-
-
-	@include desktop {
-		padding: 30px 270px 30px 136px;
-	}
-
-	width: 100%;
-
-	background-color: #fff;
-}
-
-
-
-.burgerButton {
-	border: none;
-	width: 24px;
-	height: 24px;
-	background-color: transparent;
-	svg {
-		width: 100%;
-		height: 100%;
-	}
+	flex-direction: column;
 
 	@include tablet {
 		display: none;
 	}
 }
 
-.navWrapper {
-	display: none;
-	@include tablet {
-		display: flex;
-		flex-direction: row;
-	}
-}
-
 .navItem {
-	@include tablet {
-		@include calc(5, 60px);
-		margin-right: 60px;
+	@include calc(5, 24px);
+	margin-bottom: 24px;
 
-		text-align: center;
+	text-align: center;
 
-		&:last-child {
-			margin-right: 0;
-		}
+	&:last-child {
+		margin-bottom: 0;
 	}
 
 	.navLink {

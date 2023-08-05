@@ -8,6 +8,7 @@ import image3 from "../../assets/img/ourProjects/img3.png";
 import image4 from "../../assets/img/ourProjects/img4.png";
 import image5 from "../../assets/img/ourProjects/img5.png";
 import ScrollTrigger from "react-scroll-trigger";
+import { Link } from "react-router-dom";
 
 const OurProjects = () => {
 	const [isEntered, setIsEntered] = useState(false);
@@ -24,37 +25,51 @@ const OurProjects = () => {
 			<div className={isEntered ? "animateLeft" : ""}>
 				<div className={styles.container}>
 					<h3 className={styles.title}>Наши проекты</h3>
-					<div className={styles.photoGrid}>
-						<div className={styles.row}>
+					<ul className={styles.photoGrid}>
+						<li className={styles.photo}>
 							<img
 								src={image1}
 								alt='project'
-								className={styles.photo}
 							/>
+							<div className={styles.photoFrame}>
+								<h4 className={styles.photoTitle}>ДОСУГОВЫЙ ЦЕНТР</h4>
+								<Link
+									className={styles.aboutLink}
+									to={"projects"}>
+									ПОДРОБНЕЕ
+									<span className={styles.iconWrapper}>
+										<BsArrowRight className={styles.icon} />
+									</span>
+								</Link>
+							</div>
+						</li>
+
+						<li className={styles.photo}>
 							<img
 								src={image2}
 								alt='project'
-								className={styles.photo}
 							/>
-						</div>
-						<div className={styles.row}>
+						</li>
+
+						<li className={styles.photo}>
 							<img
 								src={image3}
 								alt='project'
-								className={styles.photo}
 							/>
+						</li>
+						<li className={styles.photo}>
 							<img
 								src={image4}
 								alt='project'
-								className={styles.photo}
 							/>
+						</li>
+						<li className={styles.photo}>
 							<img
 								src={image5}
 								alt='project'
-								className={styles.photo}
 							/>
-						</div>
-					</div>
+						</li>
+					</ul>
 
 					<button className={styles.ourProjectBtn}>
 						ВСЕ ПРОЕКТЫ

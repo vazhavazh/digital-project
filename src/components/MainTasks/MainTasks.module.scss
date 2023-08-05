@@ -1,22 +1,47 @@
 @import "../../index.scss";
 
 .container {
-	margin-bottom: 120px;
+	border: 1px solid red;
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	@include tablet {
+		margin-bottom: 60px;
+	}
+	@include desktop {
+		margin-bottom: 120px;
+	}
 }
 .title {
+	align-self: center;
 	display: inline-block;
 	color: $titleGray;
-	font-size: 64px;
+
 	font-weight: 300;
 	line-height: 100%;
 	max-width: 519px;
-	margin-bottom: 62px;
+	margin-bottom: 24px;
+	font-size: 44px;
+
+	@include tablet {
+		align-self: auto;
+		margin-bottom: 62px;
+		font-size: 64px;
+	}
 }
 
 .tasksWrapper {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	flex-direction: column;
+	gap: 12px;
+	@include tablet {
+		flex-direction: row;
+
+		width: 100%;
+	}
+
+
 }
 
 .taskItem {
@@ -41,8 +66,12 @@
 	position: absolute;
 	display: inline-block;
 	top: -35%;
+	right: 0;
 	font-family: "SFProDisplay-Black";
-	font-size: 200px;
+	font-size: 150px;
+	@include tablet {
+		font-size: 200px;
+	}
 	font-weight: 900;
 	color: $thirdColorWhite;
 }
@@ -50,8 +79,11 @@
 .taskDescription {
 	color: $mainTextColorGrey;
 	display: inline-block;
-	font-size: 22px;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 163.636%;
+	@include tablet {
+		font-size: 22px;
+	}
 }

@@ -1,18 +1,29 @@
 @import "../../index.scss";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .container {
-	border-bottom: 1px solid rgba(200, 200, 200, 0.50);
+	
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 10px;
+	text-align: center;
+	border-bottom: 1px solid rgba(200, 200, 200, 0.5);
 	width: 100%;
 	margin-bottom: 24px;
 
 	background-color: $footerColorBlack;
-
-	padding: 60px 116px;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	padding: 15px 29px;
+	align-items: center;
+	@include tablet {
+		align-items: stretch;
+		padding: 30px 58px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@include desktop {
+		text-align: inherit;
+		padding: 60px 116px;
+	}
 
 	color: #fff;
 
@@ -21,10 +32,38 @@
 	font-weight: 500;
 	line-height: 171.429%;
 	letter-spacing: 0.03rem;
-
-	
 }
 
+.logoLink {
+	display: none;
+	@include tablet {
+		display: block;
+	}
+}
+
+.navContainer {
+	display: none;
+	@include desktopSmall {
+		display: block;
+	}
+}
+.title {
+	display: none;
+	font-size: 16px;
+	margin-bottom: 12px;
+	@include tablet {
+		display: block;
+	}
+	@include desktop {
+		margin-bottom: 25px;
+	}
+}
+
+.navList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
 .navLink {
 	color: $mainBgColorWhite;
 
@@ -41,22 +80,16 @@
 	}
 }
 
-.title {
-	font-size: 16px;
-	margin-bottom: 25px;
-}
-
-.navList {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-
 .contactList {
 	display: flex;
 	flex-direction: column;
-	gap: 31px;
+	gap: 10px;
 	flex-wrap: wrap;
+	align-items: center;
+	@include tablet {
+		gap: 31px;
+		align-items: stretch;
+	}
 
 	a {
 		display: flex;
@@ -102,11 +135,15 @@
 }
 
 .allRights {
-	margin-bottom: 24px;
+	
 	color: rgba(200, 200, 200, 0.5);
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 183.333%;
+	margin-bottom: 8px;
+	@include tablet {
+		margin-bottom: 24px;
+	}
 }

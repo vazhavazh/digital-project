@@ -1,13 +1,22 @@
 @import "../../index.scss";
 
 .heroWrapper {
+	border: 1px solid red;
 	position: relative;
 
 	display: flex;
 	justify-content: space-between;
+	gap: 12px;
 	align-items: center;
 	overflow: hidden;
-	margin-bottom: 120px;
+	margin-bottom: 24px;
+	@include tablet {
+		margin-bottom: 60px;
+	}
+
+	@include desktop {
+		margin-bottom: 120px;
+	}
 
 	&::before {
 		content: "";
@@ -27,32 +36,56 @@
 }
 
 .titleWrapper {
-	margin-bottom: 90px;
+	margin-bottom: 60px;
+
+	@include desktop {
+		margin-bottom: 90px;
+	}
 }
 
 .mainTitle {
 	color: $titleGray;
-	font-size: 64px;
+	font-size: 34px;
 	font-weight: 300;
 	line-height: 100%;
 	text-transform: uppercase;
+	@include tablet {
+		font-size: 64px;
+	}
 }
 
 .projectTitle {
 	color: $mainTextColorGrey;
-	font-size: 64px;
+	font-size: 34px;
 	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
+	@include tablet {
+		font-size: 64px;
+	}
+}
+.flexWrapper {
+	display: flex;
+	flex-direction: column;
 }
 
 .btnWrapper {
 	z-index: 10000;
 	position: relative;
 	display: flex;
-	gap: 23px;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 24px;
+	@include mobileL {
+		margin-bottom: 60px;
+	}
+	@include tablet {
+		gap: 23px;
+	}
 
-	margin-bottom: 90px;
+	@include desktop {
+		margin-bottom: 90px;
+	}
 }
 
 .btn {
@@ -88,16 +121,16 @@
 .counter {
 	display: flex;
 	position: relative;
-	justify-content: space-between;
+	justify-content: center;
 	padding-top: 4px;
 	padding-bottom: 3px;
-	max-width: 142px;
+	gap: 90px;
 	&::before {
 		content: "";
 		z-index: 1;
 		position: absolute;
 		top: 100%;
-		left: 40%;
+		left: 45%;
 		transform: translate(-50%, -50%);
 		width: 1px;
 		height: 140%;
@@ -117,6 +150,8 @@
 	img {
 		position: relative;
 		z-index: 10;
+		max-width: 100%; /* Максимальная ширина картинки - 100% от родительского контейнера */
+		height: auto;
 	}
 }
 
@@ -124,12 +159,17 @@
 	z-index: 11;
 	position: absolute;
 	bottom: 0;
-	
+
 	align-items: center;
 	display: flex;
 	max-width: 222px;
 	max-height: 71px;
-	padding: 30px 50px;
+
+	padding: 8px 14px;
+	@include tablet {
+		padding: 30px 50px;
+	}
+
 	border: none;
 	background: $mainBgColorWhite;
 	transition: all $hoverAnimation;

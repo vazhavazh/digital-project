@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollTrigger from "react-scroll-trigger";
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import MainTasks from "../../components/MainTasks/MainTasks";

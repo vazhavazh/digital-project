@@ -1,40 +1,137 @@
 @import "../../index.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
 .container {
-	
-    margin-bottom: 120px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid red;
+	margin-bottom: 24px;
+	@include tablet {
+		margin-bottom: 60px;
+	}
+	@include desktop {
+		margin-bottom: 120px;
+	}
 }
 
 .title {
+	align-self: center;
 	display: inline-block;
 	color: $titleGray;
-	font-size: 64px;
+
 	font-weight: 300;
 	line-height: 100%;
-	margin-bottom: 60px;
+	max-width: 519px;
+	margin-bottom: 24px;
+	font-size: 44px;
+
+	@include tablet {
+		align-self: auto;
+		margin-bottom: 62px;
+		font-size: 64px;
+	}
 }
 
 .photoGrid {
 	display: flex;
-	flex-direction: column;
-	gap: 30px;
-    margin-bottom: 30px;
-}
-
-.row {
-	display: flex;
-	gap: 30px;
-	overflow: hidden;
+	flex-wrap: wrap;
+	gap: 10px;
+	@include tablet {
+		gap: 30px;
+	}
+	justify-content: space-between;
+	margin-bottom: 30px;
 }
 
 .photo {
-	flex: 1;
-	max-width: calc(50% - 30px);
-	max-height: 255px;
+	overflow: hidden;
+	position: relative;
+
+	&:nth-child(1),
+	&:nth-child(2) {
+		@include calc(2, 10px);
+
+		@include tablet {
+			@include calc(2, 30px);
+		}
+	}
+
+	&:nth-child(n + 3) {
+		@include calc(3, 10px);
+		@include tablet {
+			@include calc(3, 30px);
+		}
+	}
+
+	img {
+		width: 100%;
+		min-height: 125px;
+		max-height: 125px;
+		display: block;
+		@include tablet {
+			min-height: 255px;
+			max-height: 255px;
+		}
+	}
 }
 
-.row:first-child {
-	justify-content: space-between;
+.photoFrame {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 51, 51, 0.8); /* Цвет фрейма с прозрачностью */
+}
+
+.aboutLink {
+	display: flex;
+	font-family: "Gothic A1", sans-serif;
+	text-decoration: none;
+
+	border: none;
+	background-color: transparent;
+	transition: all $hoverAnimation;
+	gap: 12px;
+	color: $mainBgColorWhite;
+	align-items: center;
+	font-size: 12px;
+
+	line-height: 100%;
+	letter-spacing: 2.4px;
+	text-transform: uppercase;
+
+	@include tabletLess {
+		justify-content: center;
+	}
+
+	@include desktop {
+		max-width: 222px;
+		max-height: 71px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: $mainBgColorWhite;
+		color: $mainTextColorGrey;
+	}
+
+	& .icon {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.photoTitle {
+	color: $mainBgColorWhite;
+
+	font-size: 64px;
+
+	font-weight: 700;
+	line-height: 1;
 }
 
 .iconWrapper {
@@ -43,9 +140,12 @@
 	height: 24px;
 }
 .ourProjectBtn {
-   
 	display: flex;
-	max-width: 222px;
+	justify-content: center;
+	width: 100%;
+	@include tablet {
+		max-width: 222px;
+	}
 	max-height: 71px;
 	padding: 24px 36px;
 	border: none;
@@ -59,7 +159,7 @@
 	line-height: 100%;
 	letter-spacing: 2.4px;
 	text-transform: uppercase;
-     margin-left: auto;
+	margin-left: auto;
 
 	&:hover {
 		cursor: pointer;
