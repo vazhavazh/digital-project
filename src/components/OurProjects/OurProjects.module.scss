@@ -95,7 +95,14 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(51, 51, 51, 0.8); /* Цвет фрейма с прозрачностью */
+	transition: background-color $hoverAnimation;
+	background-color: rgba(51, 51, 51, 0.8); /* Цвет фрейма с прозрачностью */
+
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(104, 103, 103, 0.456);;
+		
+	}
 }
 
 .aboutLink {
@@ -125,11 +132,7 @@
 		max-height: 71px;
 	}
 
-	&:hover {
-		cursor: pointer;
-		background-color: $mainBgColorWhite;
-		color: $mainTextColorGrey;
-	}
+	
 
 	& .icon {
 		width: 100%;
