@@ -1,4 +1,23 @@
-<div align="center">
+# Digital-project is test SPA prosject.
+
+## A fully responsive markup with routing pages, mostly written in React, SASS and other libs to show basic Front End  skills.
+
+## Demo
+
+You can view the live demo of the project [here](https://vazhavazh.github.io/digital-project/).
+
+## Features
+
+- Implements smooth scrolling using the `react-scroll-trigger` library.
+- Using SVG icons as react-components.
+- Utilizes popular icons from the `react-icons` library.
+- Utilizes the latest features of React, including hooks.
+- Integrates with React Router for smooth navigation between pages.
+- Includes responsive design and styling using SASS.
+
+
+
+<div align="left">
 	<table>
 		<tr>
 			<td><code><img width="70" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code></td>
@@ -17,3 +36,36 @@
 		</tr>
 	</table>
 </div>
+
+
+
+
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory: `cd digital-project`.
+3. Install the project dependencies: `npm install`.
+4. Start the development server: `npm start`.
+
+## Scripts
+
+- `start`: Runs the development server.
+- `build`: Builds the production version of the project.
+- `test`: Runs tests using React Testing Library and Jest.
+- `eject`: Ejects the project configuration from `react-scripts`.
+- `deploy`: Deploys the project to GitHub Pages.
+
+## Contributing
+
+Contributions to this project are welcome! If you find a bug or want to suggest an improvement, please open an issue or submit a pull request.
+
+
+
+---
+
+Created with ❤️ by Vazha
+
+
