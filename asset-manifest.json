@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/digital-project/static/css/main.ea22f8e5.css",
+    "main.css": "/digital-project/static/css/main.7c7c0f45.css",
     "main.js": "/digital-project/static/js/main.2a9387c0.js",
     "static/media/SFProDisplay-Black.ttf": "/digital-project/static/media/SFProDisplay-Black.857e26e0300b2f00edb4.ttf",
     "static/media/Hero.png": "/digital-project/static/media/Hero.b4a63b77e1acfd22e65e.png",
@@ -24,11 +24,11 @@
     "static/media/icon3.svg": "/digital-project/static/media/icon3.d505d372083d7b3a80bb949aa59460a6.svg",
     "static/media/icon1.svg": "/digital-project/static/media/icon1.25283a5b18170bb8e26c16e203fcf9f8.svg",
     "static/media/facebook.svg": "/digital-project/static/media/facebook.76e2d7b26d156d05926c9128c880ec06.svg",
-    "main.ea22f8e5.css.map": "/digital-project/static/css/main.ea22f8e5.css.map",
+    "main.7c7c0f45.css.map": "/digital-project/static/css/main.7c7c0f45.css.map",
     "main.2a9387c0.js.map": "/digital-project/static/js/main.2a9387c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea22f8e5.css",
+    "static/css/main.7c7c0f45.css",
     "static/js/main.2a9387c0.js"
   ]
 }
