@@ -9,6 +9,11 @@ const Header = () => {
 	const [modal, setModal] = useState(false);
 	const closeModal = () => {
 		setModal(false);
+		 document.documentElement.style.overflow = ""
+	};
+	const openModal = () => {
+		setModal(true);
+		document.documentElement.style.overflow = "hidden"
 	};
 	return (
 		<header className={styles.header}>
@@ -19,7 +24,7 @@ const Header = () => {
 			</Link>
 			<button
 				className={styles.burgerButton}
-				onClick={() => setModal(true)}>
+				onClick={openModal}>
 				<GiHamburgerMenu />
 			</button>
 			<MyModal
