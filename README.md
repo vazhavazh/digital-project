@@ -1,6 +1,6 @@
 # Digital-project is test SPA prosject.
 
-## A fully responsive markup, with routing pages, mostly written in React, SASS and other libs to show basic Front End  skills.
+## A fully responsive markup, with routing pages, mostly written on React, SASS and other libs to show basic Front end skills.
 
 ## Demo
 
